@@ -11,6 +11,13 @@ function App() {
         dateTime="09.08.2013"
         location="London"
       />
+      <Gig
+        bandName="The Rolling Stones"
+        imageUrl="https://cdn.britannica.com/41/197341-050-4859B808/The-Rolling-Stones-Bill-Wyman-Keith-Richards-1964.jpg"
+        description="The Rolling Stones are an English rock band formed in London in 1962."
+        dateTime="10.08.2013"
+        location="London"
+      />
     </div>
   );
 }
