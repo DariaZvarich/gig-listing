@@ -1,5 +1,6 @@
 import "react";
 import { render, screen } from "@testing-library/react";
+import '@testing-library/jest-dom'
 import Gig from "./Gig";
 
 describe("Gig component", () => {
