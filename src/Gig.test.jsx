@@ -1,5 +1,5 @@
 import "react";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom'
 import Gig from "./Gig";
 
@@ -45,5 +45,19 @@ describe("Gig component", () => {
 
     expect(screen.getByText(location)).toBeInTheDocument();
     console.debug(screen.getByText(location))
+  });
+
+  it("renders with initial favorite status as not favorited", () => {
+    render(<Gig />);
+    expect(screen.getByText('Add to Favorites')).toBeInTheDocument();
+    expect(screen.queryByText('Favorited')).toBeNull(); 
+  });
+
+  it("toggles favorite status when 'Add to Favorites' button is clicked", () => {
+    render(<Gig />);
+    fireEvent.click(screen.getByText('Add to Favorites'));
+    expect(screen.getByText('Favorited')).toBeInTheDocument();
+    fireEvent.click(screen.getByText('Remove from Favorites'));
+    expect(screen.queryByText('Favorited')).toBeNull();
   });
 });
