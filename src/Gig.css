@@ -17,3 +17,16 @@
 .date-time {
     font-weight: bold;
 }
+.favorite-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.favorite-status {
+    color: green;
+  font-weight: bold;
+}
+
