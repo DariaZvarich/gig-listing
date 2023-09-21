@@ -1,3 +1,4 @@
+import 'react';
 import "./Gig.css"; 
 
 function Gig(props) {
